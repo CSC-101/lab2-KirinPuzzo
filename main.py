@@ -77,7 +77,7 @@ def surprising(L: list[str], other: str) -> list[str]:
 words = ["this", "is", "confusing", "code."]
 first = surprising(words, "Avoid")
 second = surprising(words, "such.")
-# What is the value of words at this point? words = ["this", "is", "confusing", "such"]
-# What are the values of first and second at this point? first=["this","is", "confusing", "Avoid"], second = ["this", "is", "confusing", "such"]
-# What happened? Each call appended the list and returned it. The first replaced the word "code" with "Avoid" and the second replaced "Avoid" with "such".
-print()   
+# What is the value of words at this point? words = ["this", "is", "confusing", "code", "Avoid", "such"]
+# What are the values of first and second at this point? first=["this","is", "confusing", "code", "Avoid"], second = ["this", "is", "confusing", "code", "Avoid", "such"]
+# What happened? Each call appended the list and returned it. The first added "Avoid" at the end and the second added "such" at the end.
+print()
